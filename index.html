@@ -1,28 +1,90 @@
-<html>
 <head>
-    <title>Enable/Disable a HTML button</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<title>Bootstrap Hide Show Password</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
+</head>
+<body>
+
+
+
+<head>
+
+<title>Transformar letras minúsculas em maiúsculas</title>
+<style type="text/css">
+#mestre{
+ 
+</style>
+<script type="text/javascript">
+function alteraMaiusculo(){
+ var valor = document.getElementById("campo").texto;
+ var novoTexto = valor.value.toLowerCase();
+ valor.value = novoTexto;
+ }
+</script>
 </head>
 
-<body>
-      Name: <input type="text" id="reco" />
 
-    <a href="https://www.estudenayep.com/materiais"  >
-<input type="submit" id="submit" disabled="disabled" />
-</body>
+<body>
+<div id="mestre">
+<form id="campo" name="formulario">
+
+
+SENHA:
+
+
+
+<br />
+
+
+
+
+<input autofocus="" size="100" type="password" id="urlDoSite" maxlength="100" name="passowrd" onkeyup="alteraMaiusculo()" required="" 
+
+type="text" value="" class="form-control" data-toggle="password" value="" />
+
+		</div>
+		<div class="form-group">
+
+		</div>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	$("#password").password('toggle');
+</script>
+
+<body>
+<div id="mestre">
+<form id="campo" name="formulario">
+
 
 <script>
-    $(document).ready(function () {
-        $('#reco').on('input change', function () {
-           
-if ($(this).val() == '76112446472' || $(this).val() == '76112446473' || $(this).val() == '76112446474' || $(this).val() == '76112446475' || $(this).val() == '76112446476')
-{
-                $('#submit').prop('disabled', false);
-            }
-            else {
-                $('#submit').prop('disabled', true);
-            }
-        });
-    });
+    function open_win() {
+        var url ="https://www.estudenayep.com/" + document.getElementById ("urlDoSite").value + "";
+        if ( !url ) {
+url = "#";
+   
+         }
+        window.location.replace( url ,"location=1,status=1,scrollbars=1, width=1,height=1");
+    }
 </script>
-</html>
+    
+              
+ 
+        <input onclick="open_win()" type="button" value="ENTRAR" /><br />
+       
+<br />
+
+<script>
+function myFunction() {
+  var x = document.getElementById("urlDoSite");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
